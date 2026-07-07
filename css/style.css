@@ -35,14 +35,14 @@ body {
 .campo-grupo label {
     display: block;
     margin-bottom: 5px;
-    color: gray;
+    color: rgb(80 95 118);
     font-size: 14px;
 }
 
 .campo-grupo input {
     width: 100%;
     padding: 10px;
-    border: 1px solid gray;
+    border: 1px solid rgb(80 95 118);
     border-radius: 4px;
     box-sizing: border-box;
 }
@@ -96,4 +96,19 @@ body {
 
 .acessar button{
     font-family:'Open Sans' 
+}
+
+.logo {
+    height: 60px;
+}
+
+.Esqueceuasenha {
+    text-align: right;
+    display: block;    
+    color: blue;
+    text-decoration: none;
+}
+
+.Sistemadegestao {
+    color: rgb(80 95 118);
 }
