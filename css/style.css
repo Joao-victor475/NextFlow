@@ -81,7 +81,7 @@ body {
     margin-left: 15px;
 }
 
-.acessar {
+.botao_user{
     margin-top: 10px;
     display: flex;
     align-items: center;
@@ -91,7 +91,7 @@ body {
     position:absolute ;
     font-size: 20px;
     margin-left: 250px;
-    color: white;
+    color: rgb(255, 255, 255);
 }
 
 .acessar button{
