@@ -29,3 +29,16 @@
 .cabeçalho li :hover {
     color: blue ;
 }
+
+header {
+    border-bottom: 1px solid gray;
+}
+
+.cabeçalho li button {
+    background-color: blue;
+    color: white;
+    border: 0;
+    cursor: pointer;
+    padding: 5px  25px;
+}
+
