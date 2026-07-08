@@ -7,32 +7,24 @@ body {
     background-color: #f3f3f3;
 }
 
-h2 {
-    font-family: "Roboto", sans-serif;
-    font-optical-sizing: auto;
-}
-
-p {
-    font-family: "Roboto", sans-serif;
-}
 
 .login-container {
-    background-color:white;
+    background-color:blue;
     padding: 30px;
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(173, 20, 20, 0.1);
+    box-shadow: 0 4px 12px blue;
     width: 100%;
     height: 75%;
     max-width: 380px;
     text-align: center;
-    font-size: arial;
+    font-size: small;
     
 }
 
 .login-container h2 {
     margin-bottom: 20px;
     font-size: 24px;
-    color: rgb(5, 5, 243);
+    color: blue;
     text-align: center;
 }
 
@@ -40,6 +32,16 @@ p {
     margin-bottom: 15px;
     text-align: left;
 }
+
+.fa{
+    color: black;
+}
+
+
+.fa-mobile-screen-button{
+ color: black;
+}
+
 
 .campo-grupo label {
     display: block;
@@ -106,3 +108,4 @@ p {
 .acessar button{
     font-family:'Open Sans' 
 }
+
