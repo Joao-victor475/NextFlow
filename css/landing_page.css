@@ -1,0 +1,65 @@
+.body {
+    background-color: rgb(247 249 251);
+}
+
+.cabeçalho {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cabeçalho nav {
+    display: flex;
+    
+}
+
+.cabeçalho li {
+    padding: 0 15px;
+    list-style-type: none;
+    color: rgb(80 95 118);
+    cursor: pointer;
+}
+
+.cabeçalho a {
+   text-decoration: none; 
+   color: blue;
+   font-size: 24px; 
+}
+
+.cabeçalho li a {
+    color: rgb(80 95 118);
+    font-size: 20px;
+}
+
+.cabeçalho li :hover {
+    color: blue ;
+}
+
+header {
+    border-bottom: 1px solid gray;
+}
+
+.cabeçalho li button {
+    background-color: blue;
+    color: white;
+    border: 0;
+    cursor: pointer;
+    padding: 5px  25px;
+}
+.imagem {
+    width: 410px;
+    height: 223.41px;
+    border-radius: .8rem;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+    border: 5px solid;
+    border-color: white;
+}
+
+.corpo h1 {
+    font-size: 48px;    
+    font-family: Hanken Grotesk;
+}
+
+.corpo p {
+    font-size: 18px;
+    font-family: Hanken Grotesk;
+}
