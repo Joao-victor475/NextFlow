@@ -1,3 +1,7 @@
+.body {
+    background-color: rgb(247 249 251);
+}
+
 .cabeçalho {
     display: flex;
     justify-content: space-between;
@@ -41,4 +45,21 @@ header {
     cursor: pointer;
     padding: 5px  25px;
 }
+.imagem {
+    width: 410px;
+    height: 223.41px;
+    border-radius: .8rem;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+    border: 5px solid;
+    border-color: white;
+}
 
+.corpo h1 {
+    font-size: 48px;    
+    font-family: Hanken Grotesk;
+}
+
+.corpo p {
+    font-size: 18px;
+    font-family: Hanken Grotesk;
+}
