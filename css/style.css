@@ -12,10 +12,6 @@ h2 {
     font-optical-sizing: auto;
 }
 
-p {
-    font-family: "Roboto", sans-serif;
-}
-
 .login-container {
     background-color:white;
     padding: 30px;
@@ -112,12 +108,25 @@ p {
 }
 
 .Esqueceuasenha {
-    text-align: right;
+
+    text-align: flex-start;
+    font-family: sans-serif;
     display: block;    
     color: blue;
     text-decoration: none;
+    margin-top: 10px
 }
 
 .Sistemadegestao {
     color: rgb(80 95 118);
+
 }
+
+.paragrafo-ou {
+    font-family:sans-serif;
+    color:blue
+
+}
+
+
+
