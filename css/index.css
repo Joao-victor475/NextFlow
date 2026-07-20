@@ -5,7 +5,6 @@
 .cabeçalho {
     display: flex;
     justify-content: space-between;
-    font-family:sans-serif;
 }
 
 .cabeçalho nav {
@@ -185,39 +184,3 @@ header {
 .img-text4 {
     margin-bottom: 80px;
 }
-
-.preço-text {
-    text-align: center;
-}
-
-.preço-text p {
-    font-size: 20px;
-    color:rgb(67 70 85);
-}
-
-.planos {
-    border: solid;
-    width: 350px;
-    height: 350px;
-    border-color: rgb(195 198 215);
-}
-
-.planos h1, p{
-    margin: 0px 0;
-    text-align: center;
-}
-
-.planos {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 5px;
-}
-
-.preços {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-

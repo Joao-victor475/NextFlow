@@ -14,20 +14,27 @@
         
         <h2>NexFlow</h2>
         <p class="Esqueceu_senha">
-            Insira o gmail de recuperação
+            Redefinir Senha
         </p>
         <form>
         
             <div class="campo-grupo">        
-                <label for="Email">Email:</label>
+                <label for="nova_senha">Nova Senha:</label>
                 <div class="entrada">
-                    <input type="email" id="senha" placeholder="Digite seu Email">
+                    <input type="password" id="senha" placeholder="Digite sua nova senha">
                     <i class="fa fa-solid fa-lock"></i>
+                </div>
+            </div>
+
+            <div class="campo-grupo">
+                <label for="redefinir-senha">Confirmar Senha:</label>
+                <div class="confirmaçao">
+                    <input type="password" id="senha" placeholder="Confirme a senha criada">
                 </div>
             </div>
         
             <div class="botao_user">
-                <button formaction="redefinir_senha.html" type="submit" class="bnt-login">Recuperar senha</button>
+                <button formaction="login.html" type="submit" class="bnt-login">Confirmar</button>
             </div>
               
         </form>
