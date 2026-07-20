@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>nexflow</title>
+    <title>nextflow</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -14,10 +14,11 @@
     
     <div = class="login-container">
         <img src="img/logo_nexus.png" alt="logo"class="logo"> 
-        <h2>NexFlow</h2>
+        <h2>NextFlow</h2>
         <p class="Sistemadegestao">
             Sistema de Gestão - Login
         </p>
+        
         <form>
             <div class="campo-grupo">
                 <label for="CPF">CPF:</label>
@@ -25,6 +26,7 @@
                     <i class="fa fa-user"></i>
                     <input type="CPF" id="CPF" placeholder="Digite seu CPF" required> 
                 </div>
+
             </div>
         
             <div class="campo-grupo">        
@@ -39,12 +41,10 @@
                 <button type="submit" class="bnt-login">Acessar Sistema</button>
                 <span class="acessar-icone">&#9032;</span>
             </div>
-            <p></p>
-            <div class="botao_user">
-                <button type="submit" class="bnt-login">novo-usuário</button>
-                <i class="acessar-icone fa fa-user"></i>
+
+            <div class="paragrafo-ou">
+                 <p>ou</p>
             </div>
-            <a href="Esqueceu_senha.html" class="Esqueceuasenha">Esqueceu a Senha?</a>
             
 
             <div class="preços"> 
@@ -52,11 +52,19 @@
 
             </div>
         </form>
+
+        <div class="botao_user">
+            <i class="fa fa-user acessar-icone"></i>
+                <a href="tela_cadastro.html" class="bnt-login">
+                    Cadastre-se
+                </a>
+        </div>
+         
+        <a href="Esqueceu_senha.html" class="Esqueceuasenha">Esqueceu a Senha ?</a>
+               
     </div>
 
 
 
-
 </body>
-
 </html>

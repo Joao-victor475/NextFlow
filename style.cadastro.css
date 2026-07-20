@@ -1,34 +1,30 @@
 body {
-    display: flex;         /* Ativa o modo Flexbox */
-    justify-content: center; /* Alinha horizontalmente no centro */
-    align-items: center;     /* Alinha verticalmente no centro */
-    height: 100vh;         /* Define a altura como 100% da tela visível */
-    margin: 0;             /* Remove as margens padrão do navegador */
+    display: flex;         
+    justify-content: center;
+    align-items: center;    
+    height: 100vh;         
+    margin: 0;           
     background-color: #f3f3f3;
 }
 
-h2 {
-    font-family: "Roboto", sans-serif;
-    font-optical-sizing: auto;
-}
 
 .login-container {
-    background-color:white;
+    background-color:blue;
     padding: 30px;
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(173, 20, 20, 0.1);
+    box-shadow: 0 4px 12px blue;
     width: 100%;
     height: 75%;
     max-width: 380px;
     text-align: center;
-    font-size: arial;
+    font-size: small;
     
 }
 
 .login-container h2 {
     margin-bottom: 20px;
     font-size: 24px;
-    color: rgb(5, 5, 243);
+    color: blue;
     text-align: center;
 }
 
@@ -37,17 +33,27 @@ h2 {
     text-align: left;
 }
 
+.fa{
+    color: black;
+}
+
+
+.fa-mobile-screen-button{
+ color: black;
+}
+
+
 .campo-grupo label {
     display: block;
     margin-bottom: 5px;
-    color: rgb(80 95 118);
+    color: gray;
     font-size: 14px;
 }
 
 .campo-grupo input {
     width: 100%;
     padding: 10px;
-    border: 1px solid rgb(80 95 118);
+    border: 1px solid gray;
     border-radius: 4px;
     box-sizing: border-box;
 }
@@ -57,7 +63,6 @@ h2 {
 }
 
 .bnt-login {
-    text-decoration: none;
     width: 100%;
     padding: 12px;
     background-color: blue;
@@ -66,7 +71,6 @@ h2 {
     border-radius: 4px;
     font-size: 16px;
     cursor: pointer;
-    font-family: sans-serif
 }
 
 .bnt-login:hover {
@@ -88,7 +92,7 @@ h2 {
     margin-left: 15px;
 }
 
-.botao_user{
+.acessar {
     margin-top: 10px;
     display: flex;
     align-items: center;
@@ -98,37 +102,10 @@ h2 {
     position:absolute ;
     font-size: 20px;
     margin-left: 250px;
-    color: rgb(255, 255, 255);
+    color: white;
 }
 
 .acessar button{
     font-family:'Open Sans' 
 }
-
-.logo {
-    height: 60px;
-}
-
-.Esqueceuasenha {
-
-    text-align: flex-start;
-    font-family: sans-serif;
-    display: block;    
-    color: blue;
-    text-decoration: none;
-    margin-top: 10px
-}
-
-.Sistemadegestao {
-    color: rgb(80 95 118);
-
-}
-
-.paragrafo-ou {
-    font-family:sans-serif;
-    color:blue
-
-}
-
-
 
