@@ -1,9 +1,9 @@
 body {
-    display: flex;         /* Ativa o modo Flexbox */
-    justify-content: center; /* Alinha horizontalmente no centro */
-    align-items: center;     /* Alinha verticalmente no centro */
-    height: 100vh;         /* Define a altura como 100% da tela visível */
-    margin: 0;             /* Remove as margens padrão do navegador */
+    display: flex;         
+    justify-content: center;
+    align-items: center;    
+    height: 100vh;         
+    margin: 0;           
     background-color: #f3f3f3;
 }
 

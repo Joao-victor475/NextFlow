@@ -5,6 +5,7 @@
 .cabeçalho {
     display: flex;
     justify-content: space-between;
+    font-family:sans-serif;
 }
 
 .cabeçalho nav {
