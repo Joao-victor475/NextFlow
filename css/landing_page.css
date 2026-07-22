@@ -22,7 +22,7 @@
 
 .cabeçalho a {
    text-decoration: none; 
-   color: blue;
+   color: rgb(0 74 198);
    font-size: 24px; 
 }
 
@@ -31,8 +31,10 @@
     font-size: 20px;
 }
 
+
+
 .cabeçalho li :hover {
-    color: blue ;
+    color: white;
 }
 
 header {
@@ -40,11 +42,11 @@ header {
 }
 
 .cabeçalho li button {
-    background-color: blue;
+    background-color: rgb(0 74 198);
     color: white;
     border: 0;
     cursor: pointer;
-    padding: 5px  25px;
+    padding: 5px  20px;
 }
 .imagem {
     width: 410px;
