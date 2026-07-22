@@ -66,9 +66,9 @@ const pageSettings = {
       { label: 'Atrasos', value: '01', detail: 'em atendimento' }
     ],
     items: [
-      { name: 'Tech Supply', detail: 'Entrega em 24h', value: 'R$ 18.400', status: 'Bom', statusClass: 'ok' },
-      { name: 'Nexus Parts', detail: 'Pedido em análise', value: 'R$ 6.200', status: 'Atenção', statusClass: 'warn' },
-      { name: 'FastLog', detail: 'Prazo vencido', value: 'R$ 3.900', status: 'Urgente', statusClass: 'alert' }
+      { name: 'senac', detail: 'Entrega em 24h', value: 'R$ 18.400', status: 'Bom', statusClass: 'ok' },
+      { name: 'Cisco network', detail: 'Pedido em análise', value: 'R$ 6.200', status: 'Atenção', statusClass: 'warn' },
+      { name: 'tecnologia', detail: 'Prazo vencido', value: 'R$ 3.900', status: 'Urgente', statusClass: 'alert' }
     ]
   },
   financeiro: {
