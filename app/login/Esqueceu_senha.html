@@ -6,39 +6,39 @@
     <title>esquece_senha</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/Esqueceu_senha.css">
+    <link rel="icon" type="image/x-icon" href="logo_nexus.ico">
 </head>
 <body>
      
     <div = class="login-container">
         <img src="img/logo_nexus.png" alt="logo"class="logo"> 
         
-        <h2>NexFlow</h2>
+        <h2>NextFlow</h2>
         <p class="Esqueceu_senha">
-            Redefinir Senha
+            Insira o gmail de recuperação
         </p>
         <form>
         
             <div class="campo-grupo">        
-                <label for="nova_senha">Nova Senha:</label>
+                <label for="Email">Email:</label>
                 <div class="entrada">
-                    <input type="text" id="senha" placeholder="Digite sua nova senha">
+                    <input type="email" id="senha" placeholder="Digite seu Email">
                     <i class="fa fa-solid fa-lock"></i>
-                </div>
-            </div>
-
-            <div class="campo-grupo">
-                <label for="redefinir-senha">Confirmar Senha:</label>
-                <div class="confirmaçao">
-                    <input type="text" id="senha" placeholder="       Confirme a senha criada">
-
                 </div>
             </div>
         
             <div class="botao_user">
-                <button formaction="login.html" type="submit" class="bnt-login">Confirmar</button>
+                <button formaction="redefinir_senha.html" type="submit" class="bnt-login">Recuperar senha</button>
             </div>
               
         </form>
+
+        <div class="botao_user">
+            <a href="login.html" class="bnt-login">Voltar</a>
+       </div>
+        
     </div>
+
+         
 </body>
 </html>
