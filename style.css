@@ -20,34 +20,33 @@
     cursor: pointer;
 }
 
-.cabeçalho a {
+.navbar-brand {
    text-decoration: none; 
    color: rgb(0 74 198);
    font-size: 24px; 
 }
 
 .cabeçalho li a {
-    color: rgb(80 95 118);
+    color: rgb(40, 43, 49);
     font-size: 20px;
 }
-
-
 
 .cabeçalho li :hover {
     color: white;
 }
 
-header {
-    border-bottom: 1px solid gray;
-}
-
-.cabeçalho li button {
+.cabeçalho li .comece {
     background-color: rgb(0 74 198);
     color: white;
     border: 0;
     cursor: pointer;
     padding: 5px  20px;
 }
+
+header {
+    border-bottom: 1px solid gray;
+}
+
 .imagem {
     width: 410px;
     height: 223.41px;
