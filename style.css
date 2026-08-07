@@ -254,4 +254,10 @@ li.card-text{
     text-align:start;
 }
 
-
+.rodape li{
+    font-family: "Hanken Grotesk", sans-serif;
+    list-style: none;
+    text-align: center;
+    margin-right: 20px;
+    font-size: 14px;
+}
