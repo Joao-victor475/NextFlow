@@ -32,36 +32,36 @@
     text-decoration: none;
 }
 
-.cabeçalho a {
+.navbar-brand {
    text-decoration: none; 
-   color: blue;
+   color: rgb(0 74 198);
    font-size: 24px; 
 }
 
 .cabeçalho li a {
-    color: rgb(80 95 118);
+    color: rgb(40, 43, 49);
     font-size: 20px;
 }
 
 .cabeçalho li :hover {
-    color: blue ;
-    text-decoration: none;
+    color: white;
+}
+
+.cabeçalho li .comece {
+    background-color: rgb(0 74 198);
+    color: white;
+    border: 0;
+    cursor: pointer;
+    padding: 5px  20px;
 }
 
 header {
     border-bottom: 1px solid gray;
 }
 
-.cabeçalho li button {
-    background-color: blue;
-    color: white;
-    border: 0;
-    cursor: pointer;
-    padding: 5px  25px;
-}
 .imagem {
-    width: 410px;
-    height: 223.41px;
+    width: 600px;
+    height: 321.71px;
     border-radius: .8rem;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
     border: 5px solid;
@@ -69,14 +69,19 @@ header {
 }
 
 .texto1 h1 {
-    font-size: 48px;    
-    font-family: Hanken Grotesk;
-    
+    font-size: 60px;    
+     font-family: "Hanken Grotesk", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: weight;
+        font-style: normal;     
 }
 
 .texto1 p {
-    font-size: 18px;
-    font-family: Hanken Grotesk;
+    font-size: 20px;
+    font-family: "Hanken Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
 }
 
 .texto1 {
@@ -91,7 +96,7 @@ header {
 }
 
 .imagem2 {
-    width: 418px;
+    width: 598.4px;
     height: 384px;
     border-radius: .8rem;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
@@ -100,12 +105,17 @@ header {
 .texto2 {
     display: flex;
     flex-direction: column; 
+    min-width: 40%;
 }
 
 .img-text2 {
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    align-items: center;   
+    gap: 65px; /* Espaço entre a imagem e a coluna de texto */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
 }
 
 .caixa-logo {
@@ -115,10 +125,18 @@ header {
 
 .texto2 p {
     font-size: 16px;
+    font-family: "Hanken Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
 }
 
 .texto2 h1 {
-    font-size: 24px;
+    font-size: 30px;
+    font-family: "Hanken Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
 }
 
 .img-text {
@@ -130,7 +148,7 @@ header {
 }
 
 .imagem3 {
-    width: 418px;
+    width: 598.4px;
     height: 384px;
     border-radius: .8rem;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
@@ -138,13 +156,18 @@ header {
 
 .texto3 {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
+    min-width: 40%;
 }
 
 .img-text3 {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    gap: 65px; /* Espaço entre a imagem e a coluna de texto */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
 }
 
 .caixa-logo {
@@ -154,10 +177,18 @@ header {
 
 .texto3 p {
     font-size: 16px;
+    font-family: "Hanken Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
 }
 
 .texto3 h1 {
-    font-size: 24px;
+    font-size: 30px;
+    font-family: "Hanken Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
 }
 
 .img-text3 {
@@ -165,7 +196,7 @@ header {
 }
 
 .imagem4 {
-    width: 418px;
+    width: 598.4px;
     height: 384px;
     border-radius: .8rem;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
@@ -174,12 +205,17 @@ header {
 .texto4 {
     display: flex;
     flex-direction: column; 
+    min-width: 40%; 
 }
 
 .img-text4 {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    gap: 65px; /* Espaço entre a imagem e a coluna de texto */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
 }
 
 .caixa-logo {
@@ -189,12 +225,51 @@ header {
 
 .texto4 p {
     font-size: 16px;
+    font-family: "Hanken Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
 }
 
 .texto4 h1 {
-    font-size: 24px;
+    font-size: 30px;
+    font-family: "Hanken Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
 }
 
 .img-text4 {
     margin-bottom: 80px;
+}
+
+.preço-text {
+    text-align: center;
+}
+
+.preço-text p {
+    font-size: 20px;
+    color:rgb(67 70 85);
+}
+
+.preços {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.card-title, .card-text{
+    text-align: center;
+}
+
+li.card-text{
+    text-align:start;
+}
+
+.rodape li{
+    font-family: "Hanken Grotesk", sans-serif;
+    list-style: none;
+    text-align: center;
+    margin-right: 20px;
+    font-size: 14px;
 }
