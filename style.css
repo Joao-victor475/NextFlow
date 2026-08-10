@@ -276,3 +276,7 @@ header {
 .row{
     margin-bottom: 25px;
 }
+
+.rodape_lista strong{
+    font-size: 25px;
+}
