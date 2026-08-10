@@ -284,14 +284,45 @@ a {
     text-align: center;
 }
 
-li.card-text{
+.card-text li{
     text-align:start;
 }
 
-.rodape li{
+.rodape a{
+    font-family: "Hanken Grotesk", sans-serif;
+    color: #004ac6;
+    text-decoration: none;
+    font-size: 24px;
+    margin-left: 15px;
+
+}
+
+.rodape_lista li, .rodape_lista a{
     font-family: "Hanken Grotesk", sans-serif;
     list-style: none;
+    text-decoration: none;
     text-align: center;
     margin-right: 20px;
     font-size: 14px;
+    color: #000;
 }
+
+.row{
+    margin-bottom: 25px;
+}
+
+.rodape_lista strong{
+    font-size: 20px;
+    color: #004ac6;
+}
+
+.rodape{
+    background-color: #e0e3e5;
+    width: 100vw;
+    position: absolute;
+}
+
+.linha{
+    margin-top: 0;
+}
+
