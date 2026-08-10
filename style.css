@@ -307,5 +307,17 @@ a {
 }
 
 .rodape_lista strong{
-    font-size: 25px;
+    font-size: 20px;
+    color: #004ac6;
 }
+
+.rodape{
+    background-color: #e0e3e5;
+    width: 100vw;
+    position: absolute;
+}
+
+.linha{
+    margin-top: 0;
+}
+
