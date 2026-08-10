@@ -2,14 +2,44 @@
     background-color: rgb(247 249 251);
 }
 
-.cabeçalho {
-    display: flex;
-    justify-content: space-between;
-    font-family:sans-serif;
+.logo_cabeçalho {
+    display:flex;
+    justify-content: flex-start;
+    font-family: "Roboto";
+    color: blue;
+    position: relative;
+    top: -15px;
 }
 
-.cabeçalho nav {
+a {
+    text-decoration: none;
+    color: blue;
+}
+
+.logotipo {
+    padding: 0 9px;
+}
+
+.links_cabeçalho {
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    font-family: sans-serif;
+    padding: 0 220px;
+    text-decoration:solid;
+    font-size: large;
+    color: blue;
+    position: relative;
+    top: -110px;
+
+}
+
+.botao-cabeçalho {
     display: flex;
+    justify-content: flex-end;
+    align-items: end;
+    position: relative;
+    top: -130px;
     
 }
 
@@ -18,6 +48,7 @@
     list-style-type: none;
     color: rgb(80 95 118);
     cursor: pointer;
+    text-decoration: none;
 }
 
 .navbar-brand {
@@ -43,9 +74,7 @@
     padding: 5px  20px;
 }
 
-header {
-    border-bottom: 1px solid gray;
-}
+
 
 .imagem {
     width: 600px;

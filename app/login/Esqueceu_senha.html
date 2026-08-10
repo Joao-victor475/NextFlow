@@ -4,41 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>esquece_senha</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/Esqueceu_senha.css">
-    <link rel="icon" type="image/x-icon" href="logo_nexus.ico">
+    <link rel="stylesheet" href="login.css">
+    <link rel="icon" type="image/x-icon" href="../../assets/">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
 <body>
-     
     <div = class="login-container">
-        <img src="img/logo_nexus.png" alt="logo"class="logo"> 
+        <img src="../../assets/img/logo_nexus.png" alt="logo"class="logo"> 
         
         <h2>NextFlow</h2>
         <p class="Esqueceu_senha">
             Insira o gmail de recuperação
         </p>
         <form>
-        
+            
             <div class="campo-grupo">        
                 <label for="Email">Email:</label>
                 <div class="entrada">
-                    <input type="email" id="senha" placeholder="Digite seu Email">
-                    <i class="fa fa-solid fa-lock"></i>
+                    <i class="fa fa fa-envelope"></i>
+                    <input type="email" id="senha"  placeholder= "Digite seu Email">
                 </div>
             </div>
         
             <div class="botao_user">
-                <button formaction="redefinir_senha.html" type="submit" class="bnt-login">Recuperar senha</button>
+                <button formaction="redefinir_senha.html" type="submit" class="bnt-login">Recuperar senha<i class="fa fa-solid fa-lock"></i></button>
             </div>
               
         </form>
 
         <div class="botao_user">
-            <a href="login.html" class="bnt-login">Voltar</a>
+            <a href="login.html" class="bnt-login">Voltar<i class="fa fa-rotate-left"></i></a> 
        </div>
         
-    </div>
-
-         
+    </div>  
 </body>
+
 </html>
