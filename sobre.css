@@ -1,82 +1,10 @@
-.body {
-    background-color: rgb(247 249 251);
+.linha{
+    margin-top: 0;
 }
 
-.logo_cabeçalho {
-    display:flex;
-    justify-content: flex-start;
-    font-family: "Roboto";
-    color: blue;
-    position: relative;
-    top: -15px;
-}
-
-.botao-começar{
-    margin-left: auto;
-    display: flex;
-    justify-content: end;
-
-}
-
-a {
-    text-decoration: none;
-    color: blue;
-}
-
-.logotipo {
-    padding: 0 9px;
-}
-
-
-.links_cabeçalho {
-    display:flex;
-    justify-content:space-between;
-    align-items: end;
-    font-family: sans-serif;
-    padding: 0 220px;
-    text-decoration:solid;
-    font-size: large;
-    color: blue;
-    position: relative;
-    top: -110px;
-
-}
-
-.botao-começar {
-    justify-content: end;
-    align-items: end;
-}
-
-.cabeçalho li {
-    padding: 0 15px;
-    list-style-type: none;
-    color: rgb(80 95 118);
-    cursor: pointer;
-    text-decoration: none;
-}
-
-.navbar-brand {
-   justify-content: center;
-   text-decoration: none; 
-   color: rgb(0 74 198);
-   font-size: 24px; 
-   align-items: center;
-}
-
-.cabeçalho li a {
-    color: rgb(40, 43, 49);
-    font-size: 20px;
-}
-
-.cabeçalho li :hover {
-    color: white;
-}
-
-.cabeçalho li .comece {
-    background-color: rgb(0 74 198);
-    color: white;
-    border: 0;
-    cursor: pointer;
-    padding: 5px  20px;
+.imagem1{
+width: 1900px;
+height: 300px;
+margin-left: 0px;
 }
 
