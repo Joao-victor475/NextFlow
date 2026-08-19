@@ -338,7 +338,32 @@ a {
     margin-top: 0;
 }
 
+<<<<<<< HEAD
 
+=======
+.rodape_lista2 strong{
+    font-size: 20px;
+    color: #004ac6;
+}
+
+.rodape_lista2 li, .rodape_lista2 a{
+    font-family: "Hanken Grotesk", sans-serif;
+    list-style: none;
+    text-decoration: none;
+    text-align: center;
+    margin-right: 20px;
+    font-size: 14px;
+    color: #000;
+}
+
+.alinhamento{
+    display: flex;
+    justify-content: space-around;
+    margin:0 650px;
+}
+
+/* Estilo do Balão Flutuante */
+>>>>>>> 9201c05094a4d60a20c396f9bd48e46242ac665f
 .btn-contato-flutuante {
             position: fixed;
             bottom: 30px;      
