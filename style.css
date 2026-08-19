@@ -28,6 +28,7 @@ a {
 }
 
 
+
 .links_cabeçalho {
     display:flex;
     justify-content:space-between;
@@ -282,6 +283,7 @@ a {
 
 .card-title, .card-text{
     text-align: center;
+    list-style: none;
 }
 
 .card-text li{
