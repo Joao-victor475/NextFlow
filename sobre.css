@@ -1,9 +1,18 @@
+.rodape {
+  position: absolute;
+  bottom: 0;
+  min-height: 10vh; 
+}
+
+
+
 .linha{
     margin-top: 0;
 }
 
 .imagem1{
 position: relative;
+object-fit: cover;
 width: 1900px;
 height: 300px;
 margin-left: 0px;
@@ -11,13 +20,13 @@ z-index: -1;
 }
 
 .overlay{
-      background-color: rgba(0,74,198,0.7); /* Black background with opacity */
+    background-color: rgba(0,74,198,0.7); /* Black background with opacity */
 }
 
 .text1{
-    display: flex;
-    justify-content: center;
-    color: black;
+    color: white;
+    font-size: 48px;
+    font-family: "Hanken Grotesk", sans-serif;
 }
 
 .text2{
