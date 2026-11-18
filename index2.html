@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Autoatendimento — Mercado Bom Preço</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style2.css">
+</head>
+
+  <body>
+
+    <!-- Seleção de pagamento (inputs radio ficam aqui, antes das telas; os <label for> estão na tela #pagamento) -->
+    <input class="pm-radio" type="radio" name="pagamento" id="pm-pix" checked aria-label="Pix">
+    <input class="pm-radio" type="radio" name="pagamento" id="pm-credito" aria-label="Cartão de crédito">
+    <input class="pm-radio" type="radio" name="pagamento" id="pm-debito" aria-label="Cartão de débito">
+    <input class="pm-radio" type="radio" name="pagamento" id="pm-vale" aria-label="Vale-alimentação">
+
+
+    <!-- ╔══════════════════════════════════════════════════════════╗
+     ║ TELA 1 — BOAS-VINDAS (#inicio)                           ║
+     ╚══════════════════════════════════════════════════════════╝ -->
+    <section id="inicio" class="tela">
+      <!-- [INTEGRAÇÃO PDV]: Logo e nome da loja (config.logo_url, config.loja_nome) -->
+      <header class="d-flex align-items-center gap-3 mb-4">
+        <div class="logo-box"><i class="bi bi-cart3"></i></div>
+        <span class="store-name">Mercado Bom Preço</span>
+      </header>
+
+      <!-- [INTEGRAÇÃO PDV]: Banner promocional gerenciável (config.banner_url, config.banner_texto) -->
+      <div class="banner mb-4">
+        <div class="deco" aria-hidden="true"><img src="img/logo_nexus-removebg-preview.png" alt=""></div>
+        <div class="txt">Semana do Consumidor: leve 2, e pague um!<small>Válido até domingo, em todas os produtos.</small>
+        </div>
+      </div>
+
+      <div class="d-flex align-items-center gap-4 mb-4">
+        <i class="bi bi-upc-scan" style="font-size:4.5rem;color:var(--accent)"></i>
+        <h1 class="cta-title m-0">Aproxime o código de barras no leitor ou toque abaixo para começar</h1>
+      </div>
+
+      <!-- Navegação: leva para a tela #caixa -->
+      <a href="#caixa" class="btn-giant"><i class="bi bi-play-circle-fill me-3"></i>INICIAR COMPRA</a>
+    </section>
+
+
+    <!-- ╔══════════════════════════════════════════════════════════╗
+     ║ TELA 2 — CAIXA E LEITURA DE PRODUTOS (#caixa)            ║
+     ╚══════════════════════════════════════════════════════════╝ -->
+    <section id="caixa" class="tela">
+      <div class="row g-4 flex-grow-1">
+
+        <!-- ============ LADO ESQUERDO: LEITURA + CATÁLOGO RÁPIDO ============ -->
+        <div class="col-xl-6 d-flex flex-column gap-4">
+
+          <div class="panel">
+            <label for="codigo" class="fw-bold fs-4 d-block mb-2"><i class="bi bi-upc-scan me-2"></i>Leitura do código
+              de barras</label>
+            <!-- [INTEGRAÇÃO PDV]: input com foco automático; leitor USB envia código + Enter → GET /produtos/codigo/{codigo} -->
+            <div class="input-group scan-wrap">
+              <span class="input-group-text"><i class="bi bi-upc-scan"></i></span>
+              <input id="codigo" type="text" class="form-control"
+                placeholder="Aguardando leitura do código de barras..." autocomplete="off">
+              <button type="button" class="btn btn-primary-store"><i class="bi bi-plus-lg me-1"></i>Adicionar</button>
+            </div>
+          </div>
+
+          <div class="panel flex-grow-1">
+            <h2 class="fs-4 fw-bold mb-3">Sem código? Toque no produto</h2>
+            <div class="row row-cols-2 row-cols-md-3 g-3">
+              <!-- [INTEGRAÇÃO PDV]: Lista de Produtos — loop sobre GET /produtos (id, nome, codigo_barras, preco, imagem_url) -->
+              <div class="col"><a href="#caixa" class="prod">
+                  <div class="thumb" style="--c:#F4DCDC">🥤</div>
+                  <div class="nm">Refrigerante Cola 350ml</div>
+                  <div class="cod"><i class="bi bi-upc"></i> 7891000500509</div>
+                  <div class="pr">R$ 4,50</div>
+                </a></div>
+              <div class="col"><a href="#caixa" class="prod">
+                  <div class="thumb" style="--c:#EBDDD3">🍫</div>
+                  <div class="nm">Chocolate ao Leite Barra 90g</div>
+                  <div class="cod"><i class="bi bi-upc"></i> 7891001001009</div>
+                  <div class="pr">R$ 7,50</div>
+                </a></div>
+              <div class="col"><a href="#caixa" class="prod">
+                  <div class="thumb" style="--c:#FBEFC6">🍿</div>
+                  <div class="nm">Salgadinho de Milho 140g</div>
+                  <div class="cod"><i class="bi bi-upc"></i> 7891002002002</div>
+                  <div class="pr">R$ 12,00</div>
+                </a></div>
+              <div class="col"><a href="#caixa" class="prod">
+                  <div class="thumb" style="--c:#DCEBF4">💧</div>
+                  <div class="nm">Água Mineral sem Gás 500ml</div>
+                  <div class="cod"><i class="bi bi-upc"></i> 7891003003003</div>
+                  <div class="pr">R$ 2,50</div>
+                </a></div>
+              <div class="col"><a href="#caixa" class="prod">
+                  <div class="thumb" style="--c:#F6EBD9">🍪</div>
+                  <div class="nm">Biscoito Recheado 120g</div>
+                  <div class="cod"><i class="bi bi-upc"></i> 7891004004004</div>
+                  <div class="pr">R$ 3,99</div>
+                </a></div>
+              <div class="col"><a href="#caixa" class="prod">
+                  <div class="thumb" style="--c:#FCE5C8">🍊</div>
+                  <div class="nm">Suco de Laranja 1L</div>
+                  <div class="cod"><i class="bi bi-upc"></i> 7891005005005</div>
+                  <div class="pr">R$ 8,90</div>
+                </a></div>
+              <!-- [INTEGRAÇÃO PDV]: Fim da lista de produtos -->
+            </div>
+          </div>
+        </div>
+
+        <!-- ============ LADO DIREITO: CARRINHO ============ -->
+        <div class="col-xl-6 d-flex flex-column gap-4">
+          <div class="panel flex-grow-1">
+            <div class="d-flex justify-content-between align-items-baseline mb-3">
+              <h2 class="fs-2 fw-bold m-0"><i class="bi bi-cart3 me-2"></i>Sua compra</h2>
+              <span class="opacity-75">Passe o produto no leitor</span>
+            </div>
+            <div class="d-flex flex-column gap-3">
+              <!-- [INTEGRAÇÃO PDV]: Itens do Carrinho — loop sobre venda.itens (produto, quantidade, subtotal) -->
+              <div class="cart-item">
+                <div class="thumb" style="--c:#F4DCDC">🥤</div>
+                <div>
+                  <div class="nm">Refrigerante Cola 350ml</div>
+                  <div class="opacity-75">R$ 4,50 cada</div>
+                </div>
+                <button type="button" class="btn-trash" aria-label="Remover item"><i class="bi bi-trash3"></i></button>
+                <div class="qty" style="grid-column:2"><button type="button" class="btn"
+                    aria-label="Diminuir">−</button><strong>2</strong><button type="button" class="btn"
+                    aria-label="Aumentar">+</button></div>
+                <div class="fs-4 fw-bold text-end">R$ 9,00</div>
+              </div>
+              <div class="cart-item">
+                <div class="thumb" style="--c:#EBDDD3">🍫</div>
+                <div>
+                  <div class="nm">Chocolate ao Leite Barra 90g</div>
+                  <div class="opacity-75">R$ 7,50 cada</div>
+                </div>
+                <button type="button" class="btn-trash" aria-label="Remover item"><i class="bi bi-trash3"></i></button>
+                <div class="qty" style="grid-column:2"><button type="button" class="btn"
+                    aria-label="Diminuir">−</button><strong>1</strong><button type="button" class="btn"
+                    aria-label="Aumentar">+</button></div>
+                <div class="fs-4 fw-bold text-end">R$ 7,50</div>
+              </div>
+              <div class="cart-item">
+                <div class="thumb" style="--c:#FBEFC6">🍿</div>
+                <div>
+                  <div class="nm">Salgadinho de Milho 140g</div>
+                  <div class="opacity-75">R$ 12,00 cada</div>
+                </div>
+                <button type="button" class="btn-trash" aria-label="Remover item"><i class="bi bi-trash3"></i></button>
+                <div class="qty" style="grid-column:2"><button type="button" class="btn"
+                    aria-label="Diminuir">−</button><strong>1</strong><button type="button" class="btn"
+                    aria-label="Aumentar">+</button></div>
+                <div class="fs-4 fw-bold text-end">R$ 12,00</div>
+              </div>
+              <!-- [INTEGRAÇÃO PDV]: Fim dos itens do carrinho -->
+            </div>
+          </div>
+
+          <!-- [INTEGRAÇÃO PDV]: Resumo financeiro (venda.qtd_total, venda.total) -->
+          <div class="summary">
+            <div class="d-flex justify-content-between fs-4 opacity-75 mb-1"><span>Total de
+                itens</span><strong>4</strong></div>
+            <div class="fs-5 opacity-75">TOTAL A PAGAR</div>
+            <div class="total-value mb-4">R$ 28,50</div>
+            <div class="row g-3">
+              <div class="col-4"><a href="#inicio"
+                  class="btn btn-cancel btn-lg w-100 h-100 d-flex align-items-center justify-content-center"><i
+                    class="bi bi-x-circle me-2"></i>Cancelar</a></div>
+              <div class="col-8"><a href="#pagamento" class="btn btn-primary-store btn-xl w-100"><i
+                    class="bi bi-check2-circle me-2"></i>FINALIZAR COMPRA</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ╔══════════════════════════════════════════════════════════╗
+     ║ TELA 3 — PAGAMENTO (#pagamento)                          ║
+     ╚══════════════════════════════════════════════════════════╝ -->
+    <section id="pagamento" class="tela" style="background:var(--bg)">
+
+      <!-- Barra superior: valor + voltar -->
+      <div class="topbar-pay d-flex flex-wrap justify-content-between align-items-center gap-3 mb-4">
+        <a href="#caixa" class="btn btn-outline-light btn-lg"><i class="bi bi-arrow-left me-2"></i>Voltar ao
+          Carrinho</a>
+        <div class="text-end">
+          <div class="opacity-75">Valor a pagar</div>
+          <div class="valor">R$ 28,50</div>
+        </div>
+      </div>
+
+      <h2 class="fw-bold mb-3" style="font-size:clamp(1.8rem,3.6vw,2.8rem)">Como você quer pagar?</h2>
+
+      <div class="row g-4 flex-grow-1">
+        <!-- [INTEGRAÇÃO PDV]: Métodos de pagamento (PIX | CREDITO | DEBITO | VALE_ALIMENTACAO) → POST /vendas/{id}/pagamento -->
+        <div class="col-lg-7">
+          <div class="row g-3 h-100">
+            <div class="col-6"><label for="pm-pix" class="pay-card"><i class="bi bi-qr-code"></i>PIX<span
+                  class="tick"><i class="bi bi-check-circle-fill" style="font-size:1.1rem"></i>
+                  Selecionado</span></label></div>
+            <div class="col-6"><label for="pm-credito" class="pay-card"><i class="bi bi-credit-card"></i>Cartão de
+                Crédito<span class="tick"><i class="bi bi-check-circle-fill" style="font-size:1.1rem"></i>
+                  Selecionado</span></label></div>
+            <div class="col-6"><label for="pm-debito" class="pay-card"><i class="bi bi-credit-card-2-front"></i>Cartão
+                de Débito<span class="tick"><i class="bi bi-check-circle-fill" style="font-size:1.1rem"></i>
+                  Selecionado</span></label></div>
+            <div class="col-6"><label for="pm-vale" class="pay-card"><i class="bi bi-basket2"></i>Vale-Alimentação<span
+                  class="tick"><i class="bi bi-check-circle-fill" style="font-size:1.1rem"></i>
+                  Selecionado</span></label></div>
+          </div>
+        </div>
+
+        <!-- Área de instrução: muda conforme o método marcado -->
+        <div class="col-lg-5 d-flex flex-column gap-3">
+          <div class="panel text-center flex-grow-1 d-flex flex-column justify-content-center">
+
+            <!-- [INTEGRAÇÃO PDV]: QR Code PIX (gerar a partir de qr_code_payload retornado pela API) -->
+            <div class="instr i-pix">
+              <h3 class="fw-bold fs-3">Pague com PIX</h3>
+              <div class="qr-box my-3"><svg viewBox="0 0 29 29" shape-rendering="crispEdges" role="img"
+                  aria-label="QR Code de exemplo">
+                  <rect width="29" height="29" fill="#fff" />
+                  <path
+                    d="M0 10h1v1h-1zM0 12h1v1h-1zM0 15h1v1h-1zM1 8h1v1h-1zM1 11h1v1h-1zM1 12h1v1h-1zM1 13h1v1h-1zM1 15h1v1h-1zM1 17h1v1h-1zM2 9h1v1h-1zM2 11h1v1h-1zM2 12h1v1h-1zM2 14h1v1h-1zM2 18h1v1h-1zM3 8h1v1h-1zM3 11h1v1h-1zM3 12h1v1h-1zM3 14h1v1h-1zM3 15h1v1h-1zM3 16h1v1h-1zM3 17h1v1h-1zM3 19h1v1h-1zM4 9h1v1h-1zM4 13h1v1h-1zM4 14h1v1h-1zM4 15h1v1h-1zM4 16h1v1h-1zM4 18h1v1h-1zM4 19h1v1h-1zM4 20h1v1h-1zM5 9h1v1h-1zM5 10h1v1h-1zM5 12h1v1h-1zM5 14h1v1h-1zM5 15h1v1h-1zM5 16h1v1h-1zM5 17h1v1h-1zM5 20h1v1h-1zM6 13h1v1h-1zM6 17h1v1h-1zM6 20h1v1h-1zM7 8h1v1h-1zM7 9h1v1h-1zM7 10h1v1h-1zM7 14h1v1h-1zM7 15h1v1h-1zM8 0h1v1h-1zM8 5h1v1h-1zM8 6h1v1h-1zM8 7h1v1h-1zM8 8h1v1h-1zM8 9h1v1h-1zM8 10h1v1h-1zM8 12h1v1h-1zM8 13h1v1h-1zM8 14h1v1h-1zM8 15h1v1h-1zM8 19h1v1h-1zM9 2h1v1h-1zM9 3h1v1h-1zM9 9h1v1h-1zM9 10h1v1h-1zM9 17h1v1h-1zM9 20h1v1h-1zM9 21h1v1h-1zM9 23h1v1h-1zM9 25h1v1h-1zM9 26h1v1h-1zM9 27h1v1h-1zM9 28h1v1h-1zM10 3h1v1h-1zM10 4h1v1h-1zM10 5h1v1h-1zM10 8h1v1h-1zM10 9h1v1h-1zM10 10h1v1h-1zM10 11h1v1h-1zM10 12h1v1h-1zM10 13h1v1h-1zM10 15h1v1h-1zM10 21h1v1h-1zM10 22h1v1h-1zM10 24h1v1h-1zM10 25h1v1h-1zM10 26h1v1h-1zM11 3h1v1h-1zM11 4h1v1h-1zM11 5h1v1h-1zM11 7h1v1h-1zM11 8h1v1h-1zM11 10h1v1h-1zM11 11h1v1h-1zM11 12h1v1h-1zM11 13h1v1h-1zM11 16h1v1h-1zM11 18h1v1h-1zM11 19h1v1h-1zM11 22h1v1h-1zM11 23h1v1h-1zM11 27h1v1h-1zM11 28h1v1h-1zM12 1h1v1h-1zM12 2h1v1h-1zM12 3h1v1h-1zM12 5h1v1h-1zM12 8h1v1h-1zM12 9h1v1h-1zM12 10h1v1h-1zM12 11h1v1h-1zM12 13h1v1h-1zM12 14h1v1h-1zM12 19h1v1h-1zM12 23h1v1h-1zM12 26h1v1h-1zM12 27h1v1h-1zM13 0h1v1h-1zM13 1h1v1h-1zM13 2h1v1h-1zM13 3h1v1h-1zM13 8h1v1h-1zM13 11h1v1h-1zM13 12h1v1h-1zM13 14h1v1h-1zM13 15h1v1h-1zM13 16h1v1h-1zM13 18h1v1h-1zM13 21h1v1h-1zM13 22h1v1h-1zM13 23h1v1h-1zM13 24h1v1h-1zM13 25h1v1h-1zM13 27h1v1h-1zM13 28h1v1h-1zM14 0h1v1h-1zM14 1h1v1h-1zM14 3h1v1h-1zM14 5h1v1h-1zM14 6h1v1h-1zM14 7h1v1h-1zM14 8h1v1h-1zM14 10h1v1h-1zM14 11h1v1h-1zM14 12h1v1h-1zM14 19h1v1h-1zM14 20h1v1h-1zM14 21h1v1h-1zM14 23h1v1h-1zM14 24h1v1h-1zM14 26h1v1h-1zM14 27h1v1h-1zM15 0h1v1h-1zM15 3h1v1h-1zM15 4h1v1h-1zM15 7h1v1h-1zM15 11h1v1h-1zM15 13h1v1h-1zM15 17h1v1h-1zM15 18h1v1h-1zM15 20h1v1h-1zM15 21h1v1h-1zM15 22h1v1h-1zM15 26h1v1h-1zM16 1h1v1h-1zM16 2h1v1h-1zM16 5h1v1h-1zM16 6h1v1h-1zM16 7h1v1h-1zM16 10h1v1h-1zM16 13h1v1h-1zM16 14h1v1h-1zM16 15h1v1h-1zM16 17h1v1h-1zM16 19h1v1h-1zM16 22h1v1h-1zM16 23h1v1h-1zM16 26h1v1h-1zM17 5h1v1h-1zM17 7h1v1h-1zM17 13h1v1h-1zM17 14h1v1h-1zM17 17h1v1h-1zM17 19h1v1h-1zM17 22h1v1h-1zM17 24h1v1h-1zM17 25h1v1h-1zM17 26h1v1h-1zM17 28h1v1h-1zM18 0h1v1h-1zM18 1h1v1h-1zM18 7h1v1h-1zM18 11h1v1h-1zM18 12h1v1h-1zM18 13h1v1h-1zM18 21h1v1h-1zM18 22h1v1h-1zM18 23h1v1h-1zM18 25h1v1h-1zM19 2h1v1h-1zM19 4h1v1h-1zM19 13h1v1h-1zM19 14h1v1h-1zM19 15h1v1h-1zM19 16h1v1h-1zM19 17h1v1h-1zM19 18h1v1h-1zM19 21h1v1h-1zM19 23h1v1h-1zM19 24h1v1h-1zM19 26h1v1h-1zM19 27h1v1h-1zM19 28h1v1h-1zM20 0h1v1h-1zM20 1h1v1h-1zM20 3h1v1h-1zM20 4h1v1h-1zM20 5h1v1h-1zM20 6h1v1h-1zM20 7h1v1h-1zM20 8h1v1h-1zM20 9h1v1h-1zM20 10h1v1h-1zM20 11h1v1h-1zM20 17h1v1h-1zM20 18h1v1h-1zM20 19h1v1h-1zM20 20h1v1h-1zM20 21h1v1h-1zM20 24h1v1h-1zM20 25h1v1h-1zM20 26h1v1h-1zM20 27h1v1h-1zM20 28h1v1h-1zM21 9h1v1h-1zM21 13h1v1h-1zM21 15h1v1h-1zM21 16h1v1h-1zM21 20h1v1h-1zM21 21h1v1h-1zM21 22h1v1h-1zM21 23h1v1h-1zM21 27h1v1h-1zM22 8h1v1h-1zM22 12h1v1h-1zM22 13h1v1h-1zM22 14h1v1h-1zM22 16h1v1h-1zM22 20h1v1h-1zM22 22h1v1h-1zM22 23h1v1h-1zM22 26h1v1h-1zM22 27h1v1h-1zM23 10h1v1h-1zM23 12h1v1h-1zM23 14h1v1h-1zM23 15h1v1h-1zM23 17h1v1h-1zM23 18h1v1h-1zM23 19h1v1h-1zM23 20h1v1h-1zM23 22h1v1h-1zM24 11h1v1h-1zM24 13h1v1h-1zM24 14h1v1h-1zM24 16h1v1h-1zM24 17h1v1h-1zM24 18h1v1h-1zM24 22h1v1h-1zM24 23h1v1h-1zM25 8h1v1h-1zM25 10h1v1h-1zM25 13h1v1h-1zM25 16h1v1h-1zM25 17h1v1h-1zM25 18h1v1h-1zM25 19h1v1h-1zM25 20h1v1h-1zM25 21h1v1h-1zM25 22h1v1h-1zM25 23h1v1h-1zM25 25h1v1h-1zM25 27h1v1h-1zM25 28h1v1h-1zM26 10h1v1h-1zM26 15h1v1h-1zM26 16h1v1h-1zM26 18h1v1h-1zM26 20h1v1h-1zM26 25h1v1h-1zM26 28h1v1h-1zM27 8h1v1h-1zM27 17h1v1h-1zM27 18h1v1h-1zM27 19h1v1h-1zM27 22h1v1h-1zM27 27h1v1h-1zM28 8h1v1h-1zM28 9h1v1h-1zM28 10h1v1h-1zM28 16h1v1h-1zM28 17h1v1h-1zM28 18h1v1h-1zM28 21h1v1h-1zM28 22h1v1h-1zM28 24h1v1h-1zM28 27h1v1h-1zM28 28h1v1h-1z"
+                    fill="#000" />
+                  <rect x="0" y="0" width="7" height="7" fill="#000" />
+                  <rect x="1" y="1" width="5" height="5" fill="#fff" />
+                  <rect x="2" y="2" width="3" height="3" fill="#000" />
+                  <rect x="22" y="0" width="7" height="7" fill="#000" />
+                  <rect x="23" y="1" width="5" height="5" fill="#fff" />
+                  <rect x="24" y="2" width="3" height="3" fill="#000" />
+                  <rect x="0" y="22" width="7" height="7" fill="#000" />
+                  <rect x="1" y="23" width="5" height="5" fill="#fff" />
+                  <rect x="2" y="24" width="3" height="3" fill="#000" />
+                </svg></div>
+              <p class="fs-5 m-0">Abra o app do banco, escolha <b>Pix → Ler QR Code</b> e confirme.</p>
+              <div class="mt-3 fs-5 fw-bold" style="color:var(--primary)"><span
+                  class="spinner-border spinner-border-sm me-2"></span>Aguardando pagamento…</div>
+            </div>
+
+            <!-- [INTEGRAÇÃO PDV]: Cartão / Vale — aciona maquininha (TEF) e aguarda status APROVADA -->
+            <div class="instr i-cartao">
+              <h3 class="fw-bold fs-3 mb-3">Pagamento na maquininha</h3>
+              <div class="maq">
+                <div class="tela-maq">R$ 28,50<br>Aproxime ou insira</div>
+                <div class="keys"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+              </div>
+              <div class="hint mt-4"><i class="bi bi-wifi me-2"></i>Siga as instruções na maquininha abaixo</div>
+            </div>
+          </div>
+
+          <!-- Navegação: leva para #concluido (no sistema real, ocorre após status APROVADA) -->
+          <a href="#concluido" class="btn btn-primary-store btn-xl"><i class="bi bi-shield-check me-2"></i>SIMULAR
+            PAGAMENTO APROVADO</a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ╔══════════════════════════════════════════════════════════╗
+     ║ TELA 4 — COMPRA CONCLUÍDA (#concluido)                   ║
+     ╚══════════════════════════════════════════════════════════╝ -->
+    <section id="concluido" class="tela">
+      <i class="bi bi-check-circle-fill ok-icon"></i>
+      <h2 class="ok-title mt-3">Compra Realizada com Sucesso!</h2>
+      <p class="fs-3 mb-4">Obrigado pela preferência. Pegue seus produtos.</p>
+
+      <!-- [INTEGRAÇÃO PDV]: Resumo da venda (venda.id, itens, total, metodo, criada_em) -->
+      <div class="recibo mb-4">
+        <div class="l"><span>Venda</span><strong>#00482915</strong></div>
+        <div class="l"><span>2x Refrigerante Cola 350ml</span><span>R$ 9,00</span></div>
+        <div class="l"><span>1x Chocolate ao Leite 90g</span><span>R$ 7,50</span></div>
+        <div class="l"><span>1x Salgadinho de Milho 140g</span><span>R$ 12,00</span></div>
+        <div class="l"><span>Pagamento</span>
+          <strong><span class="met met-pix">PIX</span><span class="met met-credito">Cartão de Crédito</span><span
+              class="met met-debito">Cartão de Débito</span><span class="met met-vale">Vale-Alimentação</span></strong>
+        </div>
+        <div class="l tot"><span>Total</span><span>R$ 28,50</span></div>
+      </div>
+
+      <a href="#inicio" class="btn btn-primary-store btn-xl px-5"><i class="bi bi-arrow-repeat me-2"></i>NOVA COMPRA</a>
+    </section>
+
+  </body>
+
+</html>
